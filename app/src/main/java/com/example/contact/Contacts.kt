@@ -5,4 +5,7 @@ data class Contacts(
     var personName:String,
     var personPhoneNumber:String,
     var personEmail:String,
+    var imageUrl:String,
+
+
 )

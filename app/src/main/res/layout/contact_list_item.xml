@@ -11,12 +11,13 @@
     android:layout_marginBottom="8dp"
     app:cardBackgroundColor="#058393"
     app:cardCornerRadius="4dp"
-    app:cardElevation="8dp">
+    app:cardElevation="8dp"
+    android:id="@+id/clContact">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card"
         android:layout_width="373dp"
-        android:layout_height="246dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -35,45 +36,27 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvdetails"
-            android:layout_width="316dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="60dp"
-            android:text="It displays  the details of a person"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvcontact" />
-
-        <TextView
-            android:id="@+id/tvpack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Contact"
-            app:layout_constraintBottom_toTopOf="@+id/tvdetails"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvcontact" />
-
-        <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="80dp"
             android:text="Name :"
             app:layout_constraintBottom_toBottomOf="@+id/tvName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvName" />
+            app:layout_constraintEnd_toStartOf="@+id/tvName"
+            app:layout_constraintStart_toEndOf="@+id/imgcontacts"
+            app:layout_constraintTop_toTopOf="@+id/tvName"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="37dp"
             android:text="Veronicah Wambui"
             app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/tvdetails" />
+            app:layout_constraintTop_toBottomOf="@+id/tvcontact" />
 
         <TextView
             android:id="@+id/textView2"
@@ -82,16 +65,16 @@
             android:layout_marginStart="16dp"
             android:text="PhoneNumber :"
             app:layout_constraintBottom_toBottomOf="@+id/tvPhonenumber"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toEndOf="@+id/imgcontacts"
+            app:layout_constraintTop_toTopOf="@+id/tvPhonenumber"
+            app:layout_constraintVertical_bias="0.428" />
 
         <TextView
             android:id="@+id/tvPhonenumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
             android:text="0769411248"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
@@ -103,7 +86,7 @@
             android:layout_marginStart="16dp"
             android:text="Email:"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgcontacts"
             app:layout_constraintTop_toTopOf="@+id/tvemail"
             app:layout_constraintVertical_bias="0.0" />
 
@@ -111,10 +94,23 @@
             android:id="@+id/tvemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="20dp"
             android:text="veronicahwambui@gmail.com"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/tvPhonenumber" />
+
+        <ImageView
+            android:id="@+id/imgcontacts"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintVertical_bias="1.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>
